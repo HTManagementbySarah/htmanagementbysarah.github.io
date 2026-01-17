@@ -1,15 +1,161 @@
-/* TARIFS */
+/* =========================
+   VARIABLES / COULEURS
+========================= */
+:root{
+  --bg:#f6f7f9;
+  --bg-soft:#eef1f5;
+
+  --header:#0f1c2e;        /* bleu marine */
+  --accent:#c9a45c;        /* doré chic */
+  --accent-soft:#efe3c4;
+
+  --text:#2a3540;
+  --border:#d7dbe2;
+
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* =========================
+   BASE
+========================= */
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:'Lato', Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+}
+
+h1,h2,h3{
+  color:var(--header);
+  font-weight:700;
+  letter-spacing:.3px;
+}
+
+p{ margin:0 0 1em; }
+
+/* =========================
+   HEADER / NAV
+========================= */
+header{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+nav{
+  max-width:1100px;
+  margin:0 auto;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--header);
+  font-weight:600;
+  margin-left:18px;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section{
+  max-width:1000px;
+  margin:40px auto;
+  padding:40px 24px;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+}
+
+.section.alt{
+  background:var(--bg-soft);
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:26px;
+}
+
+/* =========================
+   BOUTONS
+========================= */
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.25s;
+}
+
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 6px 18px rgba(201,164,92,.4);
+}
+
+.btn.primary:hover{
+  background:#b8944d;
+  transform:translateY(-1px);
+}
+
+/* =========================
+   SERVICES
+========================= */
+.service-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+.service-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:22px;
+  box-shadow:var(--shadow);
+}
+
+.service-card h3{
+  margin-top:0;
+}
+
+/* =========================
+   TARIFS
+========================= */
 .pricing-wrap{
-  max-width: 980px;
-  margin: 0 auto;
+  max-width:980px;
+  margin:0 auto;
 }
 
 .pricing-card{
-  background:#ffffff;
+  background:#fff;
   border:1px solid var(--border);
   border-radius:18px;
   padding:18px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  box-shadow:var(--shadow);
+  position:relative;
+}
+
+.pricing-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:4px;
+  background:linear-gradient(90deg,var(--accent),var(--header));
+  border-radius:18px 18px 0 0;
 }
 
 .pricing-row{
@@ -25,8 +171,7 @@
 }
 
 .pricing-label{
-  flex: 1;
-  color:#2a3540;
+  flex:1;
   font-weight:600;
 }
 
@@ -36,41 +181,62 @@
 }
 
 .pricing-price{
-  min-width: 140px;
+  min-width:150px;
   text-align:right;
   font-weight:800;
-  color: var(--header);
-  letter-spacing:.2px;
+  color:var(--header);
 }
 
 .pricing-price small{
   display:block;
-  font-weight:700;
   opacity:.75;
 }
 
 .pricing-note{
-  margin: 16px 8px 0;
-  font-size: 13px;
-  line-height: 1.6;
-  color:#2a3540;
+  margin:16px 8px 0;
+  font-size:13px;
+  line-height:1.6;
   opacity:.9;
 }
 
 .pricing-cta{
-  margin-top:18px;
+  margin-top:20px;
   text-align:center;
 }
 
-/* Mobile */
-@media (max-width: 640px){
+/* =========================
+   FOOTER
+========================= */
+footer{
+  text-align:center;
+  padding:30px 20px;
+  font-size:14px;
+  opacity:.8;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:640px){
+
+  nav{
+    flex-direction:column;
+    gap:12px;
+  }
+
   .pricing-row{
     flex-direction:column;
     align-items:flex-start;
   }
+
   .pricing-price{
     text-align:left;
-    min-width: auto;
+    min-width:auto;
+  }
+
+  .section{
+    margin:24px 14px;
+    padding:28px 18px;
   }
 }
 
