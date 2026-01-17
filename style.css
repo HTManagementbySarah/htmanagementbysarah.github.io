@@ -1,242 +1,221 @@
-/* =========================
-   VARIABLES / COULEURS
-========================= */
 :root{
-  --bg:#f6f7f9;
-  --bg-soft:#eef1f5;
-
-  --header:#0f1c2e;        /* bleu marine */
-  --accent:#c9a45c;        /* doré chic */
-  --accent-soft:#efe3c4;
-
-  --text:#2a3540;
-  --border:#d7dbe2;
-
-  --shadow:0 10px 30px rgba(0,0,0,.08);
+  --bg: #0f1b2d;              /* bleu nuit */
+  --bg-soft: #16253d;
+  --card: #ffffff;
+  --text: #1f2933;
+  --title: #0f1b2d;
+  --accent: #c9a24d;          /* doré */
+  --border: #e6e2db;
+  --shadow: 0 12px 32px rgba(0,0,0,.12);
 }
 
-/* =========================
-   BASE
-========================= */
 *{ box-sizing:border-box; }
 
 body{
   margin:0;
   font-family:'Lato', Arial, sans-serif;
-  background:var(--bg);
+  background:#f4f6f9;
   color:var(--text);
-  line-height:1.65;
 }
 
-h1,h2,h3{
-  color:var(--header);
-  font-weight:700;
-  letter-spacing:.3px;
+/* ===== HEADER ===== */
+.site-header{
+  position:sticky;
+  top:0;
+  background:var(--bg);
+  z-index:1000;
 }
 
-p{ margin:0 0 1em; }
-
-/* =========================
-   HEADER / NAV
-========================= */
-header{
-  background:#fff;
-  border-bottom:1px solid var(--border);
-  box-shadow:var(--shadow);
-}
-
-nav{
+.nav{
   max-width:1100px;
-  margin:0 auto;
-  padding:18px 20px;
+  margin:auto;
+  padding:14px 18px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
 }
 
-nav a{
-  text-decoration:none;
-  color:var(--header);
-  font-weight:600;
-  margin-left:18px;
-}
-
-nav a:hover{
+.brand-title{
   color:var(--accent);
+  font-weight:800;
+  letter-spacing:.5px;
+  text-decoration:none;
 }
 
-/* =========================
-   SECTIONS
-========================= */
-.section{
-  max-width:1000px;
-  margin:40px auto;
-  padding:40px 24px;
+/* ===== MENU ===== */
+.menu{
+  display:flex;
+  gap:22px;
+}
+
+.menu a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.menu-cta{
+  background:var(--accent);
+  color:#fff !important;
+  padding:10px 18px;
+  border-radius:999px;
+}
+
+/* ===== BURGER ===== */
+.menu-toggle{
+  display:none;
+  background:none;
+  border:1px solid rgba(255,255,255,.3);
+  padding:8px;
+  border-radius:10px;
+}
+
+.menu-toggle .bar{
+  width:22px;
+  height:2px;
   background:#fff;
-  border-radius:18px;
+  margin:4px 0;
+}
+
+@media (max-width:768px){
+  .menu-toggle{ display:block; }
+
+  .menu{
+    display:none;
+    position:absolute;
+    right:18px;
+    top:64px;
+    flex-direction:column;
+    background:#fff;
+    border-radius:16px;
+    padding:14px;
+    box-shadow:var(--shadow);
+  }
+
+  .menu.open{ display:flex; }
+
+  .menu a{
+    color:var(--title);
+  }
+}
+
+/* ===== HERO ===== */
+.hero{
+  padding:80px 20px;
+  background:linear-gradient(135deg, var(--bg), var(--bg-soft));
+  display:flex;
+  justify-content:center;
+}
+
+.hero-card{
+  background:var(--card);
+  padding:48px;
+  border-radius:24px;
+  max-width:720px;
+  text-align:center;
   box-shadow:var(--shadow);
 }
 
-.section.alt{
-  background:var(--bg-soft);
+.hero h1{
+  color:var(--title);
+  font-size:2.4rem;
 }
 
-.section h2{
-  text-align:center;
-  margin-bottom:26px;
+.hero p{
+  margin:20px 0 30px;
+  line-height:1.6;
 }
 
-/* =========================
-   BOUTONS
-========================= */
+/* ===== BUTTON ===== */
 .btn{
-  display:inline-block;
-  padding:14px 28px;
-  border-radius:30px;
-  font-weight:700;
   text-decoration:none;
-  transition:.25s;
+  display:inline-block;
+  padding:14px 26px;
+  border-radius:999px;
+  font-weight:700;
 }
 
 .btn.primary{
   background:var(--accent);
   color:#fff;
-  box-shadow:0 6px 18px rgba(201,164,92,.4);
 }
 
-.btn.primary:hover{
-  background:#b8944d;
-  transform:translateY(-1px);
+/* ===== SECTIONS ===== */
+.section{
+  padding:70px 20px;
+  max-width:1100px;
+  margin:auto;
 }
 
-/* =========================
-   SERVICES
-========================= */
+.section.alt{
+  background:#eef1f6;
+}
+
+h2{
+  text-align:center;
+  color:var(--title);
+  margin-bottom:40px;
+}
+
+/* ===== SERVICES ===== */
 .service-list{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:24px;
 }
 
 .service-card{
   background:#fff;
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:22px;
+  padding:28px;
+  border-radius:20px;
   box-shadow:var(--shadow);
 }
 
-.service-card h3{
-  margin-top:0;
+/* ===== PROCESS ===== */
+.process-list{
+  max-width:600px;
+  margin:auto;
+  font-size:1.05rem;
+  line-height:1.8;
 }
 
-/* =========================
-   TARIFS
-========================= */
-.pricing-wrap{
-  max-width:980px;
-  margin:0 auto;
-}
-
+/* ===== TARIFS ===== */
 .pricing-card{
+  max-width:640px;
+  margin:auto;
   background:#fff;
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:18px;
+  padding:36px;
+  border-radius:24px;
   box-shadow:var(--shadow);
-  position:relative;
-}
-
-.pricing-card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:4px;
-  background:linear-gradient(90deg,var(--accent),var(--header));
-  border-radius:18px 18px 0 0;
 }
 
 .pricing-row{
   display:flex;
   justify-content:space-between;
-  gap:18px;
-  padding:14px 8px;
-  border-top:1px dashed rgba(15,28,46,.18);
+  padding:14px 0;
+  border-bottom:1px dashed var(--border);
 }
 
-.pricing-row:first-of-type{
-  border-top:none;
-}
-
-.pricing-label{
-  flex:1;
-  font-weight:600;
-}
-
-.pricing-label .muted{
-  font-weight:500;
-  opacity:.75;
-}
-
-.pricing-price{
-  min-width:150px;
-  text-align:right;
-  font-weight:800;
-  color:var(--header);
-}
-
-.pricing-price small{
-  display:block;
-  opacity:.75;
+.pricing-row:last-child{
+  border-bottom:none;
 }
 
 .pricing-note{
-  margin:16px 8px 0;
-  font-size:13px;
-  line-height:1.6;
-  opacity:.9;
-}
-
-.pricing-cta{
   margin-top:20px;
-  text-align:center;
+  font-size:.9rem;
+  color:#555;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ===== FOOTER ===== */
 footer{
+  background:var(--bg);
+  color:#fff;
   text-align:center;
   padding:30px 20px;
-  font-size:14px;
-  opacity:.8;
 }
 
-/* =========================
-   MOBILE
-========================= */
-@media(max-width:640px){
-
-  nav{
-    flex-direction:column;
-    gap:12px;
-  }
-
-  .pricing-row{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .pricing-price{
-    text-align:left;
-    min-width:auto;
-  }
-
-  .section{
-    margin:24px 14px;
-    padding:28px 18px;
-  }
+footer a{
+  color:var(--accent);
+  text-decoration:none;
 }
 
