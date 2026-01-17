@@ -11,7 +11,7 @@
 
 <div class="layout">
 
-  <!-- MENU -->
+  <!-- MENU LATERAL -->
   <nav class="sidebar">
     <h1>HT Management<br><span>by Sarah</span></h1>
     <ul>
@@ -22,7 +22,7 @@
     </ul>
   </nav>
 
-  <!-- CONTENU -->
+  <!-- CONTENU PRINCIPAL -->
   <main class="content">
 
     <section class="section">
@@ -31,22 +31,22 @@
       <p>
         Le coaching managérial s’adresse aux managers, responsables d’équipe
         et dirigeants souhaitant renforcer leur posture, leur leadership
-        et leur efficacité au quotidien.
+        et leur efficacité opérationnelle.
       </p>
 
       <p>
-        Mon accompagnement est à la fois stratégique et humain, ancré dans
-        la réalité du terrain et adapté aux enjeux spécifiques de votre organisation.
+        L’accompagnement est concret, pragmatique et directement lié
+        aux réalités du terrain et aux enjeux de l’entreprise.
       </p>
     </section>
 
     <section class="section">
       <h3>Objectifs de l’accompagnement</h3>
       <ul>
-        <li>Renforcer la posture managériale</li>
-        <li>Développer le leadership et la communication</li>
-        <li>Améliorer la prise de décision</li>
-        <li>Gérer les situations complexes et les tensions</li>
+        <li>Développer une posture managériale alignée</li>
+        <li>Renforcer la communication et le leadership</li>
+        <li>Gagner en clarté dans la prise de décision</li>
+        <li>Mieux gérer les situations complexes et humaines</li>
       </ul>
     </section>
 
@@ -54,13 +54,13 @@
       <h3>Tarifs</h3>
       <ul>
         <li>Coaching individuel (1h) : <strong>sur devis</strong></li>
-        <li>Accompagnement mensuel : <strong>sur devis</strong></li>
+        <li>Accompagnement régulier : <strong>sur devis</strong></li>
         <li>Programme personnalisé en entreprise : <strong>sur devis</strong></li>
       </ul>
 
       <p>
-        Les tarifs sont adaptés en fonction de vos besoins, du contexte
-        et de la durée de l’accompagnement.
+        Les modalités et tarifs sont définis en fonction des besoins,
+        du contexte professionnel et de la durée de l’accompagnement.
       </p>
     </section>
 
@@ -70,4 +70,5 @@
 
 </body>
 </html>
+
 
