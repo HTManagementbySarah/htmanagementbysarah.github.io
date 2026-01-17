@@ -2,13 +2,13 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>HT Management — Mystery Shopping & Coaching</title>
+  <title>HT Management by Sarah</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-        content="HT Management accompagne les entreprises via le mystery shopping, le coaching managérial et le développement des équipes sur le terrain.">
+        content="HT Management accompagne les entreprises via le mystery shopping, le coaching managérial et le développement des équipes.">
 
-  <!-- Google Font -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- CSS -->
@@ -16,150 +16,166 @@
 </head>
 
 <body>
+<div id="top"></div>
 
 <!-- ================= HEADER ================= -->
-<header>
-  <nav>
-    <strong>HT Management</strong>
-    <div>
-      <a href="#services">Services</a>
-      <a href="#process">Méthode</a>
-      <a href="#tarifs">Tarifs</a>
-      <a href="mailto:achatmanagement@outlook.be?subject=Demande%20de%20devis%20HT%20Management">Demander un devis</a>
+<header class="site-header">
+  <nav class="nav">
+    <a href="#top" class="brand">
+      <span class="brand-title">HT Management</span>
+    </a>
+
+    <button class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="menu"
+            onclick="toggleMenu()">
+      <span class="sr-only">Ouvrir le menu</span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <div id="menu" class="menu">
+      <a href="#services" onclick="closeMenu()">Services</a>
+      <a href="#process" onclick="closeMenu()">Méthode</a>
+      <a href="#tarifs" onclick="closeMenu()">Tarifs</a>
+      <a class="menu-cta"
+         href="mailto:achatmanagement@outlook.be?subject=Demande%20de%20devis%20HT%20Management"
+         onclick="closeMenu()">Demander un devis</a>
     </div>
   </nav>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="section">
-  <h1>HT Management by Sarah</h1>
-  <p style="text-align:center; max-width:720px; margin:0 auto;">
-    Mystery shopping, coaching managérial et accompagnement des équipes
-    pour améliorer durablement l’expérience client et la performance terrain.
-  </p>
+<section class="hero">
+  <div class="hero-card">
+    <h1>HT Management by Sarah</h1>
+    <p>
+      Mystery shopping, coaching managérial et accompagnement des équipes
+      pour améliorer durablement l’expérience client et la performance terrain.
+    </p>
 
-  <div style="text-align:center; margin-top:26px;">
     <a class="btn primary"
-       href="mailto:achatmanagement@outlook.be?subject=Demande%20de%20devis%20HT%20Management">
+       href="mailto:htmanagement@outlook.be?subject=Demande%20de%20devis%20HT%20Management">
       Demander un devis
     </a>
   </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
-<section id="services" class="section alt">
+<section id="services" class="section">
   <h2>Ce que je propose</h2>
 
   <div class="service-list">
     <div class="service-card">
       <h3>Mystery Shopping</h3>
       <p>
-        Visites mystères en conditions réelles (magasin, accueil, SAV, téléphone…),
-        avec analyse objective de l’expérience client.
+        Visites mystères en conditions réelles avec analyse détaillée
+        de l’expérience client et des pratiques terrain.
       </p>
     </div>
 
     <div class="service-card">
       <h3>Coaching managérial</h3>
       <p>
-        Accompagnement opérationnel des managers pour renforcer le leadership,
-        la posture managériale et la cohésion d’équipe.
+        Accompagnement des managers pour renforcer le leadership,
+        la posture et l’efficacité opérationnelle.
       </p>
     </div>
 
     <div class="service-card">
       <h3>Coaching d’équipes</h3>
       <p>
-        Interventions terrain orientées résultats : communication, posture client,
-        efficacité collective et engagement.
+        Interventions terrain orientées résultats :
+        cohésion, communication et engagement collectif.
       </p>
     </div>
   </div>
 </section>
 
 <!-- ================= PROCESS ================= -->
-<section id="process" class="section">
+<section id="process" class="section alt">
   <h2>Processus en 4 étapes</h2>
 
-  <ol style="max-width:700px; margin:0 auto; padding-left:20px;">
-    <li>Diagnostic initial (1 à 2 visites mystères)</li>
+  <ol class="process-list">
+    <li>Diagnostic initial (1–2 visites mystères)</li>
     <li>Restitution claire et plan d’actions</li>
     <li>Coaching managérial sur le terrain</li>
-    <li>Mesure, ajustement et suivi</li>
+    <li>Suivi, mesure et ajustements</li>
   </ol>
 </section>
 
 <!-- ================= TARIFS ================= -->
-<section id="tarifs" class="section alt">
-  <h2>Tarifs TTC — Mystery Shopping & Coaching</h2>
+<section id="tarifs" class="section">
+  <h2>Tarifs TTC</h2>
 
-  <div class="pricing-wrap">
-    <div class="pricing-card">
+  <div class="pricing-card">
 
-      <div class="pricing-row">
-        <div class="pricing-label">Visite mystère + rapport + restitution</div>
-        <div class="pricing-price">150 € <small>TTC</small></div>
-      </div>
+    <div class="pricing-row">
+      <span>Visite mystère + rapport + restitution</span>
+      <strong>150 € TTC</strong>
+    </div>
 
-      <div class="pricing-row">
-        <div class="pricing-label">Pack 3 visites (même site / enseigne)</div>
-        <div class="pricing-price">540 € <small>TTC</small></div>
-      </div>
+    <div class="pricing-row">
+      <span>Pack 3 visites (même site)</span>
+      <strong>540 € TTC</strong>
+    </div>
 
-      <div class="pricing-row">
-        <div class="pricing-label">
-          Session coaching managérial <span class="muted">(2h sur site)</span>
-        </div>
-        <div class="pricing-price">240 € <small>TTC</small></div>
-      </div>
+    <div class="pricing-row">
+      <span>Session coaching managérial (2h)</span>
+      <strong>240 € TTC</strong>
+    </div>
 
-      <div class="pricing-row">
-        <div class="pricing-label">
-          Journée complète coaching <span class="muted">(6h)</span>
-        </div>
-        <div class="pricing-price">480 € <small>TTC</small></div>
-      </div>
+    <div class="pricing-row">
+      <span>Journée coaching (6h)</span>
+      <strong>480 € TTC</strong>
+    </div>
 
-      <div class="pricing-row">
-        <div class="pricing-label">
-          Programme complet
-          <span class="muted">(audit + 3 visites + 2 coachings + restitution finale)</span>
-        </div>
-        <div class="pricing-price">1 080 € <small>TTC</small></div>
-      </div>
+    <div class="pricing-row">
+      <span>Programme complet</span>
+      <strong>1 080 € TTC</strong>
+    </div>
 
-      <div class="pricing-row">
-        <div class="pricing-label">
-          Suivi trimestriel
-          <span class="muted">(visites + coaching + indicateurs)</span>
-        </div>
-        <div class="pricing-price">1 380 € <small>TTC / trimestre</small></div>
-      </div>
+    <div class="pricing-row">
+      <span>Suivi trimestriel</span>
+      <strong>1 380 € TTC</strong>
+    </div>
 
-      <p class="pricing-note">
-        Tarifs exprimés toutes taxes comprises (TTC — TVA 21 % incluse).  
-        Les montants incluent les rapports détaillés, la restitution et la préparation.  
-        Frais de déplacement : 0,45 €/km hors région de Manage.  
-        Un devis personnalisé peut être établi selon le nombre de sites et les objectifs.
-      </p>
+    <p class="pricing-note">
+      Tarifs TTC – TVA 21 % incluse.  
+      Frais de déplacement : 0,45 €/km hors région de Manage.  
+      Devis personnalisé selon les besoins.
+    </p>
 
-      <div class="pricing-cta">
-        <a class="btn primary"
-           href="mailto:achatmanagement@outlook.be?subject=Demande%20de%20devis%20HT%20Management">
-          Demander un devis
-        </a>
-      </div>
-
+    <div class="pricing-cta">
+      <a class="btn primary"
+         href="mailto:htmanagement@outlook.be?subject=Demande%20de%20devis%20HT%20Management">
+        Demander un devis
+      </a>
     </div>
   </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
-  © HT Management — Sarah Michaux  
-  <br>
-  <a href="mailto:achatmanagement@outlook.be">achatmanagement@outlook.be</a>
+  <p>© HT Management — Sarah Michaux</p>
+  <a href="mailto:htmanagement@outlook.be">htmanagement@outlook.be</a>
 </footer>
+
+<!-- ================= JS BURGER ================= -->
+<script>
+function toggleMenu(){
+  const menu = document.getElementById('menu');
+  const btn = document.querySelector('.menu-toggle');
+  const open = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+
+function closeMenu(){
+  document.getElementById('menu').classList.remove('open');
+  document.querySelector('.menu-toggle').setAttribute('aria-expanded', false);
+}
+</script>
 
 </body>
 </html>
