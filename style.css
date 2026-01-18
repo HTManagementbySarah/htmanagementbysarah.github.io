@@ -311,4 +311,96 @@ body{
   border-color: rgba(203, 162, 120, 0.85);
   transform: translateY(-4px);
 }
+/* ====== METHODE : plus aéré + équilibré ====== */
+.methode-section {
+  margin-top: 44px;
+}
+
+/* petit liseré rose gold sous le titre (signature premium) */
+.methode-section h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.methode-section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 72px;
+  height: 2px;
+  background: rgba(203, 162, 120, 0.95);
+  border-radius: 2px;
+}
+
+/* Intro courte et légère */
+.methode-intro {
+  max-width: 780px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 16px;
+  margin: 6px 0 18px;
+}
+
+/* Grille 3 cartes */
+.methode-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Carte */
+.methode-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(203, 162, 120, 0.35); /* rose gold */
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.methode-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(203, 162, 120, 0.85);
+}
+
+.methode-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: rgba(203, 162, 120, 0.95);
+}
+
+/* Liste : plus léger visuellement */
+.methode-card ul {
+  margin: 0 0 12px;
+  padding-left: 18px;
+}
+
+.methode-card li {
+  margin-bottom: 7px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+/* CTA discret */
+.methode-cta {
+  display: inline-block;
+  margin-top: 2px;
+  color: rgba(203, 162, 120, 0.95);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.methode-cta:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .methode-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
