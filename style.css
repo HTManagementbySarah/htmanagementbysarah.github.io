@@ -207,4 +207,33 @@ body{
   transform: translateY(-4px);
   transition: 0.2s ease;
 }
+/* Liseré vertical rose gold à côté du menu */
+.sidebar {
+  position: relative;
+}
+
+.sidebar::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 2px;
+  height: calc(100% - 80px);
+  background: linear-gradient(
+    to bottom,
+    rgba(203, 162, 120, 0),
+    rgba(203, 162, 120, 0.85),
+    rgba(203, 162, 120, 0)
+  );
+}
+/* Contour rose gold des cartes */
+.card {
+  border: 1px solid rgba(203, 162, 120, 0.35);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+  border-color: rgba(203, 162, 120, 0.85);
+  transform: translateY(-4px);
+}
 
